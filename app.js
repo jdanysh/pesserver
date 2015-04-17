@@ -5,13 +5,49 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var mongoose = require('mongoose');
+
+var uri = 'mongodb://localhost:27017/pesserver'/*,options*/;
+mongoose.connect(uri);
+
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function (callback) {
+    console.log('Connected to:',uri);
+});
+
 var routes = require('./routes/index');
 var users = require('./routes/user');
+var videos = require('./routes/video');
+var playlists = require('./routes/playlist');
 
 var app = express();
 
-// view engine setup
 
+var Counter = mongoose.model('Counter', {
+    _id:String,
+    seq:Number
+});
+
+
+
+//
+//function getNextSequence() {
+//    var value;
+//    Counter.find({},function(err,doc){
+//        value:doc;
+//    });
+//
+//    return value;
+//}
+
+
+
+
+console.log('get');
+
+
+// view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
@@ -26,6 +62,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/videos', videos);
+app.use('/playlists', playlists);
+
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
