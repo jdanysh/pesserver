@@ -37,6 +37,11 @@ var User = mongoose.model('User', {
 
 
 
+//function a
+
+
+
+
 
 //var juan = new User({});
 

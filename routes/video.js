@@ -13,18 +13,18 @@ var Video = mongoose.model('Video', {
 
 
 
-var juan = new Video({
-    id:1,
-    title:'check video',
-    vimeoId:'eeeeee'
-});
+//var juan = new Video({
+//    id:1,
+//    title:'check video',
+//    vimeoId:'eeeeee'
+//});
 
 
-juan.save(function(err){
-    return {
-        'error':err
-    }
-});
+//juan.save(function(err){
+//    return {
+//        'error':err
+//    }
+//});
 
 
 /*GET*/
