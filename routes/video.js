@@ -1,30 +1,11 @@
 var express = require('express');
 var router = express.Router();
 
-var mongoose = require('mongoose');
-
-var Video = mongoose.model('Video', {
-    id:Number,
-    title:String,
-    vimeoId:String,
-    dateUpload:{type:Date, default: Date.now}
-});
 
 
 
 
-//var juan = new Video({
-//    id:1,
-//    title:'check video',
-//    vimeoId:'eeeeee'
-//});
 
-
-//juan.save(function(err){
-//    return {
-//        'error':err
-//    }
-//});
 
 
 /*GET*/

@@ -1,19 +1,19 @@
 var express = require('express');
 var router = express.Router();
 
-var mongoose = require('mongoose');
+// var mongoose = require('mongoose');
 
-var Playlist = mongoose.model('Playlist', {
-    id:String,
-    title:String,
-    description:String,
-    authors:Array,
-    dateUpload:{type:Date, default: Date.now},
-    sheetFileUrl:String,
-    sheetPresentationUrl:String,
-    sheetInnovationUrl:String,
-    videos:Array
-});
+// var Playlist = mongoose.model('Playlist', {
+//     id:String,
+//     title:String,
+//     description:String,
+//     authors:Array,
+//     dateUpload:{type:Date, default: Date.now},
+//     sheetFileUrl:String,
+//     sheetPresentationUrl:String,
+//     sheetInnovationUrl:String,
+//     videos:Array
+// });
 
 /*GET*/
 router.get('/', function (req, res) {

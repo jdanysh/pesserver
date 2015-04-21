@@ -1,24 +1,24 @@
 var express = require('express');
 var router = express.Router();
 
-var mongoose = require('mongoose');
+// var mongoose = require('mongoose');
 
-var User = mongoose.model('User', {
-    id:Number,
-    name:{
-        firstName:String,
-        lastName:String
-    },
-    role:String,
-    email:String,
-    password:String,
-    accountCreated:{type:Date, default: Date.now},
-    lastConection:String,
-    lastIp:String,
-    videoWatched:Array,
-    userStatus:String,
-    lastVideoWatched:String
-});
+// var User = mongoose.model('User', {
+//     id:Number,
+//     name:{
+//         firstName:String,
+//         lastName:String
+//     },
+//     role:String,
+//     email:String,
+//     password:String,
+//     accountCreated:{type:Date, default: Date.now},
+//     lastConection:String,
+//     lastIp:String,
+//     videoWatched:Array,
+//     userStatus:String,
+//     lastVideoWatched:String
+// });
 
 
 
